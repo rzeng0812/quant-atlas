@@ -1,3 +1,138 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ── Typography ──────────────────────────────────────────────────────────────
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; margin-top: 2rem; }
+
+article p {
+  line-height: 1.75;
+  max-width: 72ch;
+}
+
+// ── Code blocks ─────────────────────────────────────────────────────────────
+pre {
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+code {
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+// ── Tables ───────────────────────────────────────────────────────────────────
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+  margin: 1.5rem 0;
+
+  th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--lightgray);
+  }
+
+  td {
+    padding: 0.55rem 1rem;
+    border-bottom: 1px solid var(--lightgray);
+    vertical-align: top;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:hover td {
+    background: var(--highlight);
+  }
+}
+
+// ── Blockquotes ──────────────────────────────────────────────────────────────
+blockquote {
+  border-left: 3px solid var(--secondary);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  font-style: italic;
+  color: var(--darkgray);
+  background: var(--highlight);
+  border-radius: 0 6px 6px 0;
+}
+
+// ── Graph view ───────────────────────────────────────────────────────────────
+#graph-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+// ── Sidebar explorer ────────────────────────────────────────────────────────
+.explorer {
+  font-size: 0.9rem;
+}
+
+// ── Details/summary (exam answers) ──────────────────────────────────────────
+details {
+  background: var(--highlight);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--secondary);
+    user-select: none;
+    padding: 0.1rem 0;
+
+    &:hover {
+      color: var(--tertiary);
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ── Tags ─────────────────────────────────────────────────────────────────────
+.tag-link {
+  border-radius: 12px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+// ── Links — bold underline on hover ──────────────────────────────────────────
+article a {
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-bottom-color: var(--tertiary);
+  }
+}
+
+// ── Site title — bold and large ───────────────────────────────────────────────
+#quartz-body .page-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+// ── Self-assessment headers ───────────────────────────────────────────────────
+article h3 {
+  color: var(--secondary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+}

@@ -1,0 +1,152 @@
+Ingesting into: /Users/rzeng/Documents/quant-atlas
+
+Query: cat:q-fin.PR
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 695, in _parse_feed
+    return self.__try_parse_feed(url, first_page=first_page, try_index=_try_index)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 732, in __try_parse_feed
+    raise HTTPError(url, try_index, resp.status_code)
+arxiv.HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.PR&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 695, in _parse_feed
+    return self.__try_parse_feed(url, first_page=first_page, try_index=_try_index)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 732, in __try_parse_feed
+    raise HTTPError(url, try_index, resp.status_code)
+arxiv.HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.PR&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 695, in _parse_feed
+    return self.__try_parse_feed(url, first_page=first_page, try_index=_try_index)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 732, in __try_parse_feed
+    raise HTTPError(url, try_index, resp.status_code)
+arxiv.HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.PR&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rzeng/Projects/quant/ingest_papers.py", line 188, in <module>
+    ingest(args.vault, q, args.max, args.days)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rzeng/Projects/quant/ingest_papers.py", line 131, in ingest
+    for paper in client.results(search):
+                 ~~~~~~~~~~~~~~^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 648, in _results
+    feed = self._parse_feed(page_url, first_page=True)
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 703, in _parse_feed
+    return self._parse_feed(url, first_page=first_page, _try_index=_try_index + 1)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 703, in _parse_feed
+    return self._parse_feed(url, first_page=first_page, _try_index=_try_index + 1)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 703, in _parse_feed
+    return self._parse_feed(url, first_page=first_page, _try_index=_try_index + 1)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 705, in _parse_feed
+    raise err
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 695, in _parse_feed
+    return self.__try_parse_feed(url, first_page=first_page, try_index=_try_index)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/arxiv/__init__.py", line 732, in __try_parse_feed
+    raise HTTPError(url, try_index, resp.status_code)
+arxiv.HTTPError: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.PR&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=50)
+Ingesting into: /Users/rzeng/Documents/quant-atlas
+
+Query: cat:q-fin.PR
+  + From Arbitrage Removal to Density Extraction: A Model-Free Framework f
+  + Faster Monotone Implied Volatility Solver
+  + What Does Deep Hedging Actually Learn? Delta Corrections, Regime Fragi
+  + Wartime Controls, Political Connections, and the Pricing of Zaibatsu R
+  + Explicit Rational Formulae for Bachelier (Normal) Implied Volatility
+
+  Created: 5, Skipped (already exist): 0
+
+Query: cat:q-fin.TR
+  + Imperfect Commitment in Maximal Extractable Value Auctions
+  + The Privacy Subsidy in Glosten-Milgrom: Bid-Ask Spread and Welfare und
+  + Sequential Structure in Intraday Futures Data: LSTM vs Gradient Boosti
+  + The Viability of Blockchain Markets under Discrete Clearing and Paid P
+  + Deep Reinforcement Learning Framework for Diversified Portfolio Manage
+  + The Privacy Subsidy: Kyle's $λ$ under Noise-Perturbed Order-Flow Obser
+
+  Created: 6, Skipped (already exist): 0
+
+Query: cat:q-fin.PM
+  + Portfolio Preference Elicitation in Institutional Crossing Markets
+  + Continuous Timing Signals for Growth-Defensive Style Allocation: Facto
+  + Do Better Volatility Forecasts Lead to Better Portfolios? Evidence fro
+  + A Penalty-Free Pipeline for Direct Quantum-Annealer Portfolio Optimiza
+  + Where the Quantum Lives in D-Wave Hybrid Portfolio Optimization
+  + On the Expected Maximum Deficit and the Optimal Allocation of Reserves
+
+  Created: 6, Skipped (already exist): 1
+
+Query: cat:q-fin.RM
+  + Asymptotic Behaviour of Unexpected Losses and Risk Ratios for Co-Monot
+  + Mortality Heterogeneity and Actuarial Fairness in China's Notional Def
+  + Geometric Brownian motion with intermittent entries and exits
+  + A Hybrid Gaussian Process Regression Framework for Stable Volatility-C
+  + Your SaaS Is an Insurance Product: A Modeling Framework
+
+  Created: 5, Skipped (already exist): 2
+Ingesting into: /Users/rzeng/Documents/quant-atlas
+
+Query: cat:q-fin.PR
+  + Valuing American options and Flexible Forwards contracts in time-depen
+  + Matrix Approximation of Bachelier Option Prices and Greeks under Stoch
+  + Hierarchical Graph Learning for Calendar Spread Strategies in Commodit
+  + Diagonal Frog: High-order positivity-preserving FD schemes for anisotr
+  + Analytic Pricing of Bermudan Swaptions with Few Exercise Dates
+  + A Unified General Formula for Arbitrary Liquidity Operations in Weight
+  + Which Portfolios? The Construction Dependence of Factor Model Performa
+
+  Created: 7, Skipped (already exist): 0
+
+Query: cat:q-fin.TR
+  + The Inference-Compute Frontier and a Latency-Efficient Architecture fo
+  + Time-dependent weighted directed networks of cryptocurrency interactio
+  + Empirical Confirmation of the Square-Root Law of Market Impact in a U.
+  + Mitigating Adverse Selection in Concentrated Liquidity AMMs with Dynam
+  + Endogenous Randomness from Adversarial Market Learning
+  + Transaction Costs and Speed in the Ethereum Ecosystem: Scalability of 
+  + KineticSim: A Lightweight, High-Performance Execution Engine for Real-
+  + Optimal Dynamic Fees for Automated Market Makers: A Stochastic Control
+  + Do Prediction Markets Match Option Prices? Bitcoin Threshold Evidence 
+
+  Created: 9, Skipped (already exist): 1
+
+Query: cat:q-fin.PM
+  + A sharp order-three obstruction to the aggregation of conditional pric
+  + Data-Driven Duration Management -- Term Structure Forecasting Using Ma
+  + Portfolio Optimization for Commodity ETFs under Heavy-Tailed Returns
+  + A Two-Stage Decision Support System for Sustainability-Aware Long Shor
+  + Asymmetry PRISM: A CPU/GPU Portfolio Optimization Engine for Deadline-
+  + Reinforcement Learning for Risk-Sensitive Investment Management: a Fre
+
+  Created: 6, Skipped (already exist): 1
+
+Query: cat:q-fin.RM
+  + Endogenous Reinsurance Pricing in Large Competitive Insurance Markets:
+  + Robust Hedging Valuation Adjustment under Liquidity--Demand Stress
+  + Geometrically convex return risk measures on AM-algebras
+  + Continuous Hidden Markov Models for Equity Returns: Heavy-Tail Emissio
+  + Pareto Optimal Centralized Risk Sharing with Multiple Agents: Inclusiv
+  + Universal Value-at-Risk superadditivity
+  + Temporal Coarse-Graining of Multi-Sector Default Count Data Generates 
+  + On Prudence of Risk Measures
+  + Attributing Forecast Gaps to Component Models in Complex Model Suites
+  + A Censored Transformed Model for Proportional Outcomes with Boundary M
+  + Absolute Continuity of Monotone Aggregations under Positive Regression
+  + Optimal Order of Multi-Agent and General Many-Body Systems
+  + Trends, Volatility, Correlations, and Critical Phenomena in Financial 
+  + How to spot outliers: an Ensemble Anomaly Detection Framework
+  + DeXposure-Claw: An Agentic System for DeFi Risk Supervision
+
+  Created: 15, Skipped (already exist): 1
