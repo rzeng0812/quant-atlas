@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "rzeng.github.io/quant-atlas",
+    baseUrl: "rzeng0812.github.io/quant-atlas",
     ignorePatterns: ["private", "templates", ".obsidian", "99-Templates", "95-Source-Captures"],
     defaultDateType: "modified",
     theme: {
