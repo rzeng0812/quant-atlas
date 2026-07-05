@@ -20,6 +20,17 @@ created: 2026-04-12
 > **You need first:** [[Brownian Motion]], [[Ito's Lemma]] (to solve the GBM SDE and derive its closed form)
 > **This unlocks:** [[Black-Scholes Model]], [[Heston Model]], [[Implied Volatility]], [[Volatility Smile]]
 
+```mermaid
+graph LR
+  BM["Brownian Motion"] --> GBM
+  ITO["Ito's Lemma"] --> GBM
+  GBM["Geometric Brownian Motion"]:::current --> BSM["Black-Scholes Model"]
+  GBM --> HESTON["Heston Model"]
+  GBM --> IV["Implied Volatility"]
+  GBM --> SMILE["Volatility Smile"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** Once replication was established as the right pricing principle, practitioners needed an explicit mathematical model for how stock prices move. Plain Brownian motion fails: it allows negative prices and makes absolute (not proportional) moves — a \$10 fluctuation means something completely different at \$10 vs \$200.
@@ -63,6 +74,9 @@ Starting from $S_0 = 100$, $\mu = 0.05$, $\sigma = 0.2$, $T = 1$ year:
 4. Median $S_T = 100 \cdot e^{0.03} \approx 103.05$ (median grows at $\mu - \sigma^2/2$)
 
 The gap between mean and median comes from the lognormal skew — a direct consequence of the Ito correction.
+
+![5 simulated GBM sample paths, S0=100, mu=8%, sigma=25%](10-Foundations/Math/figures/gbm-paths.svg)
+*Five simulated GBM paths ($\mu=8\%$, $\sigma=25\%$). Unlike raw Brownian motion, paths stay positive and moves are proportional to the current price.*
 
 ## Analysis
 
@@ -274,5 +288,6 @@ The exact method has zero discretization error — always use it for GBM. Euler-
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram + simulated sample-path figure | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.14 + Shreve II ch.1 |
 | 2026-04-11 | QA review: status → evergreen; path wikilinks → note-name wikilinks; last_reviewed updated | QA pass |

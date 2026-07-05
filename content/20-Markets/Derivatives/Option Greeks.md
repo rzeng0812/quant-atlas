@@ -19,6 +19,18 @@ created: 2026-04-12
 > **You need first:** [[Put-Call Parity]], [[Black-Scholes Model]], [[Delta Hedging]]
 > **This unlocks:** [[Gamma Scalping]], [[Volatility Surface]], [[Value at Risk]], [[Options Strategies]]
 
+```mermaid
+graph LR
+  PCP["Put-Call Parity"] --> GREEKS
+  BSM["Black-Scholes Model"] --> GREEKS
+  DH["Delta Hedging"] --> GREEKS
+  GREEKS["Option Greeks"]:::current --> GAMMASCALP["Gamma Scalping"]
+  GREEKS --> VOLSURF["Volatility Surface"]
+  GREEKS --> VAR["Value at Risk"]
+  GREEKS --> OPTSTRAT["Options Strategies"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** After a trader delta-hedges a position, they still have no way to answer: "How much money do I lose if a week passes? If volatility spikes by 5%? If the stock makes a large jump?" Delta hedging eliminates the first-order directional risk, but the position still bleeds from time passing, gains or loses on volatility changes, and gets hurt (or helped) by big moves. Without a systematic way to measure these remaining exposures, risk management is guesswork.
@@ -89,6 +101,9 @@ Positive for calls (higher $r$ → higher forward price → call worth more). Ne
 $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma + rS\Delta = rV$$
 
 This links all Greeks together — if you know three, the fourth is determined. It's the BSM PDE in Greek notation.
+
+![Delta, Gamma, and Vega profiles vs spot price, K=100](20-Markets/Derivatives/figures/option-greeks-profiles.svg)
+*Delta, Gamma, and Vega as spot moves through the strike ($K=100$). Each has its own scale — this is why the three are plotted as separate small multiples rather than one shared axis: overlaying Delta (0–1) with Vega (tens) on a single y-axis would flatten Gamma to invisibility.*
 
 ## Walkthrough
 
@@ -232,5 +247,6 @@ The division by 100 scales vega to represent the dollar change in option value p
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram + Greek profile small-multiples figure | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.19 |
 | 2026-04-11 | Fixed broken wikilink `[[60-ML-Finance/]]` in Bridge section (replaced with plain text) | QA review |

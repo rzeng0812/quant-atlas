@@ -20,6 +20,22 @@ created: 2026-04-12
 > **You need first:** [[Geometric Brownian Motion]], [[Ito's Lemma]], [[Risk-Neutral Measure]]
 > **This unlocks:** [[Implied Volatility]], [[Option Greeks]], [[Delta Hedging]], [[Volatility Smile]], [[Heston Model]], [[Local Volatility]], [[Merton Jump-Diffusion]], [[Binomial Tree Model]]
 
+```mermaid
+graph LR
+  GBM["Geometric Brownian Motion"] --> BSM
+  ITO["Ito's Lemma"] --> BSM
+  RNM["Risk-Neutral Measure"] --> BSM
+  BSM["Black-Scholes Model"]:::current --> IV["Implied Volatility"]
+  BSM --> GREEKS["Option Greeks"]
+  BSM --> DH["Delta Hedging"]
+  BSM --> SMILE["Volatility Smile"]
+  BSM --> HESTON["Heston Model"]
+  BSM --> LOCALVOL["Local Volatility"]
+  BSM --> MERTON["Merton Jump-Diffusion"]
+  BSM --> BINOM["Binomial Tree Model"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** Before 1973, there was no agreed-upon way to price an option. Every buyer and seller had a different view on where the stock was going, so they arrived at different prices — making a functioning market impossible.
@@ -62,6 +78,9 @@ $$C - P = S_0 - K e^{-rT}$$
 **Intuition for $N(d_2)$:** probability that the option expires in-the-money under $\mathbb{Q}$
 
 **Intuition for $N(d_1)$:** the expected stock price, conditional on finishing above $K$, divided by $S_0$ — also the [[Option Greeks|Delta]] of the call
+
+![Call and put payoff diagrams at expiry, strike K=100](30-Models/Pricing/figures/bsm-payoff-diagram.svg)
+*Payoff at expiry ($K=100$). BSM prices the option today; this is what it pays out once $T$ arrives and all uncertainty about $S_T$ has resolved.*
 
 ## Walkthrough
 
@@ -232,5 +251,6 @@ It's valid because N(−x) = 1 − N(x) for the standard normal CDF, and the put
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram + payoff diagram figure | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.15 + Shreve II ch.5 |
 | 2026-04-11 | QA review passed — no issues found | QA review |

@@ -19,6 +19,15 @@ created: 2026-04-18
 > **You need first:** basic option payoff definitions (call, put, strike, expiry)
 > **This unlocks:** [[Black-Scholes Model]], [[Implied Volatility]], [[Delta Hedging]], [[American Options]]
 
+```mermaid
+graph LR
+  PCP["Put-Call Parity"]:::current --> BSM["Black-Scholes Model"]
+  PCP --> IV["Implied Volatility"]
+  PCP --> DH["Delta Hedging"]
+  PCP --> AMER["American Options"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** Option traders needed to know whether a call and a put on the same stock — same strike, same expiry — were priced consistently with each other. Without any relationship between them, each option was priced independently, and the market could have a call and put at prices that together created free money for anyone who noticed.
@@ -300,6 +309,7 @@ Floating-point arithmetic on computers cannot represent most real numbers exactl
 ## Revision Log
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram | Visual learning pilot |
 | 2026-04-18 | Full content written | Hull ch.11 |
 | 2026-04-11 | QA review passed — all math, code, sections verified correct | QA review |
 | 2026-04-18 | Renamed "Implementation (Python)" → "Implementation" for section consistency | review |

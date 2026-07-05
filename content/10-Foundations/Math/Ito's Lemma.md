@@ -20,6 +20,18 @@ created: 2026-04-12
 > **You need first:** [[Brownian Motion]], [[Geometric Brownian Motion]], [[Stochastic Differential Equations]]
 > **This unlocks:** [[Black-Scholes Model]], [[Girsanov Theorem]], [[Risk-Neutral Measure]], [[Heston Model]]
 
+```mermaid
+graph LR
+  BM["Brownian Motion"] --> ITO
+  GBM["Geometric Brownian Motion"] --> ITO
+  SDE["Stochastic Differential Equations"] --> ITO
+  ITO["Ito's Lemma"]:::current --> BSM["Black-Scholes Model"]
+  ITO --> GIRSANOV["Girsanov Theorem"]
+  ITO --> RNM["Risk-Neutral Measure"]
+  ITO --> HESTON["Heston Model"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** To derive how an option price changes as the underlying stock moves, practitioners needed to differentiate functions of GBM. But GBM paths are nowhere differentiable — they are infinitely jagged. Applying the ordinary chain rule gives the wrong answer, because it ignores the contribution of the path's roughness.
@@ -272,5 +284,6 @@ The Ito convention requires the integrand to be $\mathcal{F}_{t_i}$-measurable �
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.14 + Shreve II ch.4 |
 | 2026-04-11 | QA review: status → evergreen; path wikilink removed; last_reviewed updated | QA pass |

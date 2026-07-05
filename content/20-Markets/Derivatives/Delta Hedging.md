@@ -19,6 +19,18 @@ created: 2026-04-12
 > **You need first:** [[Option Greeks]], [[Black-Scholes Model]], [[Put-Call Parity]]
 > **This unlocks:** [[Option Greeks]] (gamma/theta trade-off emerges from hedging), [[Gamma Scalping]], [[Implied Volatility]], [[Avellaneda-Stoikov]]
 
+```mermaid
+graph LR
+  GREEKS["Option Greeks"] --> DH
+  BSM["Black-Scholes Model"] --> DH
+  PCP["Put-Call Parity"] --> DH
+  DH["Delta Hedging"]:::current --> GREEKS
+  DH --> GAMMASCALP["Gamma Scalping"]
+  DH --> IV["Implied Volatility"]
+  DH --> AVSTOIK["Avellaneda-Stoikov"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** When a bank or market maker sells an option, they take on the risk that the stock moves against them — potentially causing large, open-ended losses. Holding the option naked is essentially an undisclosed directional bet on the stock. Regulators, risk managers, and the traders themselves needed a systematic way to neutralize this exposure.
@@ -219,5 +231,6 @@ Removing `cash *= np.exp(r * dt)` means the cash account earns zero interest. Th
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.19 |
 | 2026-04-11 | Fixed Day 1 walkthrough P&L breakdown: corrected gamma/theta offset to show net ≈ \$0 (not −\$0.07), consistent with stated $\Theta = -\$0.056$/day | QA review |

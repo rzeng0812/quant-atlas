@@ -21,6 +21,19 @@ created: 2026-04-12
 > **You need first:** [[Implied Volatility]], [[Black-Scholes Model]], [[Option Greeks]]
 > **This unlocks:** [[Volatility Surface]], [[Local Volatility]], [[Heston Model]], [[Variance Swap]], [[Exotic Options]]
 
+```mermaid
+graph LR
+  IV["Implied Volatility"] --> SMILE
+  BSM["Black-Scholes Model"] --> SMILE
+  GREEKS["Option Greeks"] --> SMILE
+  SMILE["Volatility Smile"]:::current --> VOLSURF["Volatility Surface"]
+  SMILE --> LOCALVOL["Local Volatility"]
+  SMILE --> HESTON["Heston Model"]
+  SMILE --> VARSWAP["Variance Swap"]
+  SMILE --> EXOTIC["Exotic Options"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** BSM produces a single option price for a given volatility. But when traders started backing out the implied vol from market prices at different strikes, they found something disturbing: the implied vol was not the same across strikes. Out-of-the-money puts had higher implied vol than at-the-money options. The model was systematically, consistently wrong in a structured way.
@@ -42,6 +55,9 @@ created: 2026-04-12
 $$m = \ln(K / F)$$
 
 where $F = S e^{rT}$ is the forward price. At-the-money forward corresponds to $m = 0$.
+
+![Stylized implied volatility smile vs strike, ATM=100](20-Markets/Derivatives/figures/volatility-smile-curve.svg)
+*A stylized smile: IV rises on both wings away from the money, with the left (put) wing elevated further by crash-risk demand — the asymmetry that a pure symmetric "smile" doesn't capture and that skew/butterfly measures quantify below.*
 
 **Risk-neutral density connection:** The shape of the smile encodes the market-implied probability distribution of the stock price at expiry. By the Breeden-Litzenberger formula, the risk-neutral PDF $q(K)$ is recovered from the call price surface:
 
@@ -280,6 +296,7 @@ The smile is conventionally parameterized around the forward price F = S × e^{r
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram + implied vol smile figure | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull + initial build |
 | 2026-04-12 | Note created | bootstrap |
 | 2026-04-11 | QA review: added [[Volatility Surface]] to Related Concepts | quality review |

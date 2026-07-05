@@ -21,6 +21,19 @@ created: 2026-04-12
 > **You need first:** [[Black-Scholes Model]], [[Option Greeks]] (vega), [[Put-Call Parity]]
 > **This unlocks:** [[Volatility Smile]], [[Volatility Surface]], [[Variance Swap]], [[VIX]], [[Gamma Scalping]]
 
+```mermaid
+graph LR
+  BSM["Black-Scholes Model"] --> IV
+  GREEKS["Option Greeks"] --> IV
+  PCP["Put-Call Parity"] --> IV
+  IV["Implied Volatility"]:::current --> SMILE["Volatility Smile"]
+  IV --> VOLSURF["Volatility Surface"]
+  IV --> VARSWAP["Variance Swap"]
+  IV --> VIX["VIX"]
+  IV --> GAMMASCALP["Gamma Scalping"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** BSM produces an option price given a volatility input. But in practice, you observe the option price in the market and want to know what volatility the market is pricing in. There was no standard way to read the market's collective volatility expectation from observable prices — traders needed to work backwards from price to volatility.
@@ -263,6 +276,7 @@ The bisection requires a valid bracket: `bsm_call(lo)` must be below `market_pri
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull + initial build |
 | 2026-04-12 | Note created | bootstrap |
 | 2026-04-11 | QA review: fixed [[Greeks]] → [[Option Greeks]]; added [[Volatility Surface]] to Related Concepts | quality review |

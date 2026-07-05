@@ -20,6 +20,16 @@ created: 2026-04-18
 > **You need first:** [[Black-Scholes Model]], [[Binomial Tree Model]], [[Put-Call Parity]]
 > **This unlocks:** [[Exotic Options]], [[Binomial Tree Model]] (deeper usage), Longstaff-Schwartz Monte Carlo
 
+```mermaid
+graph LR
+  BSM["Black-Scholes Model"] --> AMER
+  BINOM["Binomial Tree Model"] --> AMER
+  PCP["Put-Call Parity"] --> AMER
+  AMER["American Options"]:::current --> EXOTIC["Exotic Options"]
+  AMER --> BINOM
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** The overwhelming majority of listed equity options in the real world are American-style — they can be exercised on any day before expiry. But the Black-Scholes formula only prices European options. Practitioners needed a way to price the contracts they were actually trading.
@@ -370,6 +380,7 @@ If the loop ran forward, you would encounter nodes whose continuation values are
 ## Revision Log
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram | Visual learning pilot |
 | 2026-04-18 | Full content written | Hull ch.12, ch.13 |
 | 2026-04-11 | Fixed risk-neutral probability $p$ in 4-step walkthrough (was 0.5636, corrected to 0.5379); removed unused `S_range` parameter from `early_exercise_boundary` function signature and call site | QA review |
 | 2026-04-18 | Renamed "Implementation (Python)" → "Implementation" for section consistency | review |

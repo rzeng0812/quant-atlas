@@ -20,6 +20,18 @@ created: 2026-04-12
 > **You need first:** [[Brownian Motion]], [[Geometric Brownian Motion]], [[Ito's Lemma]], [[Martingales]]
 > **This unlocks:** [[Black-Scholes Model]], [[Implied Volatility]], [[Girsanov Theorem]], all derivatives pricing models
 
+```mermaid
+graph LR
+  BM["Brownian Motion"] --> RNM
+  GBM["Geometric Brownian Motion"] --> RNM
+  ITO["Ito's Lemma"] --> RNM
+  MART["Martingales"] --> RNM
+  RNM["Risk-Neutral Measure"]:::current --> BSM["Black-Scholes Model"]
+  RNM --> IV["Implied Volatility"]
+  RNM --> GIRSANOV["Girsanov Theorem"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** Applying Ito's Lemma to a hedged option portfolio produces a formula that depends on $\mu$, the stock's real-world expected return. Since every investor estimates $\mu$ differently, there is no agreed option price — the same fundamental problem that motivated no-arbitrage pricing in the first place, reappearing in mathematical form.
@@ -259,5 +271,6 @@ For $\mu = 0.12$, $r = 0.04$, $T = 1$: the wrong simulation overestimates $E[S_T
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.13 + Shreve II ch.5 |
 | 2026-04-11 | QA review: status → evergreen; path wikilink removed; last_reviewed updated | QA pass |

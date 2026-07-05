@@ -19,6 +19,15 @@ created: 2026-04-18
 > **You need first:** [[Black-Scholes Model]], [[Risk-Neutral Measure]]
 > **This unlocks:** [[American Options]], [[Exotic Options]]
 
+```mermaid
+graph LR
+  BSM["Black-Scholes Model"] --> BINOM
+  RNM["Risk-Neutral Measure"] --> BINOM
+  BINOM["Binomial Tree Model"]:::current --> AMER["American Options"]
+  BINOM --> EXOTIC["Exotic Options"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** Black-Scholes gives an elegant closed-form formula for European options, but it breaks down the moment you add any flexibility to the option — most importantly, the right to exercise early. American put options, which can be exercised at any time before expiry, have no closed-form solution. You need a method that can check, at every moment, whether it is better to exercise now or wait.
@@ -71,6 +80,9 @@ Build the tree forward (enumerate all stock prices), then work backward (compute
 **Forward pass** — stock price at node $(i, j)$ (step $i$, $j$ up-moves):
 
 $$S_{i,j} = S_0 \cdot u^j \cdot d^{i-j}$$
+
+![Recombining binomial price lattice, S0=100, u=1.15, 4 steps](30-Models/Pricing/figures/binomial-tree-lattice.svg)
+*A 4-step recombining lattice ($S_0=100$, $u=1.15$). Nodes reached by the same number of up-moves land on the same price regardless of order — this recombination is what keeps the tree at $O(N^2)$ nodes instead of $O(2^N)$.*
 
 **Backward pass** — for European options:
 
@@ -396,6 +408,7 @@ At step i (counting backward from N), the array V has been progressively shorten
 ## Revision Log
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram + recombining lattice figure | Visual learning pilot |
 | 2026-04-18 | Full content written | Hull ch.13 |
 | 2026-04-11 | QA review passed — walkthrough arithmetic verified, CRR convergence code correct | QA review |
 | 2026-04-18 | Renamed "Implementation (Python)" → "Implementation" for section consistency | review |

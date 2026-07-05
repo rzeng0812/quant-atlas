@@ -20,6 +20,16 @@ created: 2026-04-12
 > **You need first:** none — this is a starting point
 > **This unlocks:** [[Geometric Brownian Motion]], [[Stochastic Differential Equations]], [[Ito's Lemma]], [[Ornstein-Uhlenbeck Process]]
 
+```mermaid
+graph LR
+  BM["Brownian Motion"]:::current
+  BM --> GBM["Geometric Brownian Motion"]
+  BM --> SDE["Stochastic Differential Equations"]
+  BM --> ITO["Ito's Lemma"]
+  BM --> OU["Ornstein-Uhlenbeck Process"]
+  classDef current fill:#2a78d6,stroke:#184f95,color:#ffffff,stroke-width:2px;
+```
+
 ## Why This Exists
 
 **The gap:** Practitioners needed a rigorous mathematical model for quantities that move continuously and unpredictably over time — prices, rates, spreads. There was no agreed continuous-time framework for this randomness.
@@ -61,6 +71,9 @@ Notice:
 - The path is jagged no matter how fine the grid — it never smooths out
 - The spread of paths grows as $\sqrt{t}$ — wide at $t=1$, narrow at $t=0$
 - Paths cross zero repeatedly (recurrence)
+
+![5 simulated standard Brownian motion sample paths on [0,1]](10-Foundations/Math/figures/brownian-motion-paths.svg)
+*Five simulated paths of $W_t$ on $[0,1]$. Notice how jagged every path is, regardless of scale, and how far individual paths wander from zero despite $E[W_t]=0$.*
 
 ## Analysis
 
@@ -265,5 +278,6 @@ Using $dt$ instead of $\sqrt{dt}$ makes the increments far too small (for small 
 
 | Date | Change | Trigger |
 |------|--------|---------|
+| 2026-07-04 | Added Mermaid dependency diagram + simulated sample-path figure | Visual learning pilot |
 | 2026-04-12 | Full content written | Hull ch.14 + Shreve I ch.1 |
 | 2026-04-11 | QA review: status → evergreen; path wikilinks → note-name wikilinks; last_reviewed updated | QA pass |
