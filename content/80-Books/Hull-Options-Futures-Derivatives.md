@@ -22,15 +22,15 @@ Hull is the canonical first stop for anyone entering derivatives. It covers the 
 | Chapter | Topic | Concept Notes Fed | Difficulty |
 |---------|-------|-------------------|------------|
 | 1 | Introduction to derivatives markets — forwards, futures, options, swaps; why they exist | [[Derivatives-Overview]], [[Market-Structure]] | Beginner |
-| 4 | Interest rates, compounding conventions, yield curve, duration, convexity | [[Yield-Curve]], [[Duration-Convexity]], [[Discount-Factors]] | Beginner |
+| 4 | Interest rates, compounding conventions, yield curve, duration, convexity | [[Yield Curve]], [[Duration-Convexity]], [[Discount-Factors]] | Beginner |
 | 13 | Binomial trees — one-step and multi-step; risk-neutral pricing intuition | [[Binomial-Trees]], [[Risk-Neutral-Pricing]] | Beginner |
-| 14 | Wiener processes, GBM, Ito's lemma (informal) | [[GBM]], [[Ito-Lemma-Intuition]], [[Stochastic-Processes]] | Intermediate |
+| 14 | Wiener processes, GBM, Ito's lemma (informal) | [[Geometric Brownian Motion]], [[Ito's Lemma]], [[Stochastic-Processes]] | Intermediate |
 | 15 | Black-Scholes-Merton derivation, formula, and assumptions | [[BSM-Model]], [[BSM-Derivation]] | Intermediate |
-| 19 | The Greeks — delta, gamma, theta, vega, rho; delta hedging | [[Greeks]], [[Delta-Hedging]] | Intermediate |
-| 20 | Volatility smile — skew, term structure, implied vol surface | [[Vol-Smile]], [[Implied-Volatility]], [[Vol-Surface]] | Intermediate |
-| 22 | Value at Risk — historical simulation, model-based; expected shortfall | [[VaR]], [[Expected-Shortfall]], [[Risk-Measures]] | Intermediate |
-| 25 | Exotic options — barriers, Asians, lookbacks, digitals | [[Exotic-Options]] | Intermediate |
-| 31 | Interest rate derivatives — caps/floors, swaptions, HJM framework | [[HJM-Framework]], [[Caps-Floors]], [[Swaptions]] | Advanced |
+| 19 | The Greeks — delta, gamma, theta, vega, rho; delta hedging | [[Option Greeks]], [[Delta Hedging]] | Intermediate |
+| 20 | Volatility smile — skew, term structure, implied vol surface | [[Volatility Smile]], [[Implied Volatility]], [[Volatility Surface]] | Intermediate |
+| 22 | Value at Risk — historical simulation, model-based; expected shortfall | [[Value at Risk]], [[Expected Shortfall]], [[Risk-Measures]] | Intermediate |
+| 25 | Exotic options — barriers, Asians, lookbacks, digitals | [[Exotic Options]] | Intermediate |
+| 31 | Interest rate derivatives — caps/floors, swaptions, HJM framework | [[HJM Framework]], [[Caps-Floors]], [[Swaptions]] | Advanced |
 
 ## Reading Strategy
 Beginners should read Ch.1, Ch.4, Ch.13–15, Ch.19–20 in that order — this is the core arc from "what are derivatives?" to "why does the vol smile exist?" These chapters can be read without heavy math background. Ch.22 (VaR) can follow independently. Skip Ch.25–30 until you specifically need exotic pricing. Ch.31 (interest rate derivatives and HJM) belongs after completing Path-03's theoretical groundwork in Shreve Vol II. Hull is best used as a reference after the first read-through — the chapter structure makes it easy to look up specific instruments or formulas.

@@ -1,6 +1,8 @@
 ---
+title: Quant Atlas
 type: home
 tags: [moc, home]
+description: A structured knowledge base for quantitative finance — from stochastic calculus to live strategies.
 ---
 
 # Quant Atlas

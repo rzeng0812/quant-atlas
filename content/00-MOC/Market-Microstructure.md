@@ -15,9 +15,8 @@ Order books, market impact, adverse selection
 
 
 ## All Notes
-```dataview
-TABLE tags
-FROM ""
-WHERE contains(tags, "microstructure")
-SORT file.name ASC
-```
+- [[Adverse Selection]]
+- [[Market Making]]
+- [[Order Book]]
+- [[Price Impact]]
+- [[Transaction Cost Analysis]]

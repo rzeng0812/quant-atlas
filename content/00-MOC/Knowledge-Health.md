@@ -7,72 +7,18 @@ tags: [moc, health]
 
 > Surface stale, disputed, or low-confidence knowledge that needs attention.
 
----
+This page is a maintainer tool, not published content. Each concept/model/strategy note
+carries `stability`, `confidence`, `last_reviewed`, and `review_interval_days` frontmatter;
+locally, with the [Dataview](https://blacksmithgu.github.io/obsidian-dataview/) Obsidian
+plugin installed, the queries below surface notes overdue for review, disputed or
+low-confidence notes, alpha-status drift in strategies, superseded papers, and stale
+empirical notes. This site does not render Dataview, so the live queries aren't reproduced
+here — open this vault in Obsidian with Dataview enabled to use the dashboard.
 
-## Overdue for Review
-
-```dataview
-TABLE last_reviewed, review_interval_days, stability, confidence
-FROM ""
-WHERE type = "concept" OR type = "model" OR type = "strategy"
-WHERE last_reviewed < date(today) - dur(review_interval_days + "days")
-SORT last_reviewed ASC
-```
-
----
-
-## Disputed or Low Confidence
-
-```dataview
-TABLE confidence, stability, last_reviewed
-FROM ""
-WHERE (type = "concept" OR type = "model" OR type = "strategy")
-  AND (confidence = "low" OR confidence = "disputed" OR contains(tags, "disputed"))
-SORT confidence ASC, last_reviewed ASC
-```
-
----
-
-## Strategies: Alpha Status Check
-
-```dataview
-TABLE alpha_status, confidence, last_reviewed, asset_class
-FROM ""
-WHERE type = "strategy"
-SORT alpha_status ASC, last_reviewed ASC
-```
-
----
-
-## Papers: Superseded or Disputed
-
-```dataview
-TABLE validity, year, superseded_by
-FROM "70-Papers"
-WHERE validity != "active"
-SORT validity ASC
-```
-
----
-
-## Stale Empirical Notes (>30 days)
-
-```dataview
-TABLE last_reviewed, stability
-FROM ""
-WHERE (type = "concept" OR type = "model" OR type = "strategy")
-  AND stability = "empirical"
-  AND last_reviewed < date(today) - dur(30 days)
-SORT last_reviewed ASC
-```
-
----
-
-## All Notes — Stability Map
-
-```dataview
-TABLE stability, confidence, status, last_reviewed
-FROM ""
-WHERE type = "concept" OR type = "model" OR type = "strategy"
-SORT stability ASC, confidence ASC
-```
+**Checks this dashboard runs locally:**
+- Overdue for review — `last_reviewed` older than `review_interval_days`
+- Disputed or low confidence — `confidence` is `low`/`disputed`, or tagged `disputed`
+- Strategy alpha-status drift — all `type: strategy` notes by `alpha_status`
+- Superseded or disputed papers — `70-Papers/` notes where `validity != active`
+- Stale empirical notes — `stability: empirical` notes untouched for 30+ days
+- Full stability map — every concept/model/strategy note by `stability` and `confidence`

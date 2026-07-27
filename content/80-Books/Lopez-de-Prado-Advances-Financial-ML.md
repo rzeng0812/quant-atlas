@@ -27,9 +27,9 @@ Lopez de Prado's book is structured around a single central argument: most machi
 | 5 | Ensemble methods applied to finance — bagging, random forests, boosting; why ensembles help with financial noise | [[Ensemble-Methods-Finance]] | Intermediate |
 | 6 | Feature importance — mean decrease impurity, mean decrease accuracy, single feature importance; substitution effects | [[Feature-Importance-Finance]], [[MDA-MDI]] | Intermediate |
 | 7 | Cross-validation in finance — why k-fold fails, purging and embargoing, combinatorial purged CV | [[Combinatorial-CV]], [[Purged-CV]], [[Embargoing]] | Intermediate |
-| 8 | Feature engineering — structural breaks, entropy features, market microstructure features | [[Feature-Engineering-Finance]], [[Structural-Breaks]] | Intermediate |
+| 8 | Feature engineering — structural breaks, entropy features, market microstructure features | [[Feature Engineering Finance]], [[Structural-Breaks]] | Intermediate |
 | 14 | Backtesting — the Sharpe ratio of a strategy, deflated Sharpe ratio, combinatorial backtesting to detect overfitting | [[Backtest-Overfitting]], [[Deflated-Sharpe]], [[Combinatorial-Backtesting]] | Intermediate |
-| 16 | ML asset allocation — hierarchical risk parity, comparison to mean-variance | [[HRP]], [[ML-Portfolio-Construction]] | Intermediate |
+| 16 | ML asset allocation — hierarchical risk parity, comparison to mean-variance | [[Hierarchical Risk Parity]], [[ML-Portfolio-Construction]] | Intermediate |
 | 20 | Synthetic data — generating realistic financial time series for model training and testing | [[Synthetic-Financial-Data]] | Intermediate |
 
 ## Reading Strategy

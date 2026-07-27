@@ -4,7 +4,7 @@ title: ML in Finance
 goal: Apply ML/AI techniques to alpha generation, regime detection, and execution optimization
 prereqs:
   - "[[01-Paths/Path-04-Risk-and-Portfolio]]"
-  - ML fundamentals (neural-path modules 15–17)
+  - ML fundamentals (classical ML + deep learning)
 tags: [path]
 status: active
 created: 2026-04-18
@@ -15,7 +15,7 @@ Bridge general ML knowledge into quantitative finance applications. Learn how to
 
 ## Prerequisites
 - [[01-Paths/Path-04-Risk-and-Portfolio]] — factor models and performance metrics are the evaluation vocabulary throughout this path
-- ML fundamentals — classical models (neural-path Module 15) and deep learning/sequence models (neural-path Module 17) are assumed; review before starting Feature Engineering
+- ML fundamentals — classical models and deep learning/sequence models are assumed; review before starting Feature Engineering
 
 ## Curriculum
 
@@ -37,10 +37,13 @@ Bridge general ML knowledge into quantitative finance applications. Learn how to
 3. **Lopez de Prado — Machine Learning for Asset Managers** (2020)
    - Shorter companion book. Good for regime detection and portfolio construction context.
 
-## Cross-Vault Links
-- [neural-path Module 15 — Classical ML](obsidian://open?vault=neural-path&file=Module-15-Classical-ML) — foundational models (trees, SVMs, ensembles) used in Feature Engineering and Alpha Factor
-- [neural-path Module 17 — Deep Learning](obsidian://open?vault=neural-path&file=Module-17-Deep-Learning) — sequence models (LSTM, Transformer) for time series signals
-- [neural-path Module 20 — Agent Engineering](obsidian://open?vault=neural-path&file=Module-20-Agent-Engineering) — RL agents; direct prerequisite for Reinforcement Learning Trading
+## Assumed ML Background
+This path assumes general ML fluency rather than teaching it from scratch:
+- **Classical ML** — trees, SVMs, ensembles — used throughout Feature Engineering and Alpha Factor
+- **Deep learning / sequence models** — LSTM, Transformer architectures — used for time-series signal construction
+- **Reinforcement learning** — agents and policy learning — direct prerequisite for Reinforcement Learning Trading
+
+If any of these are unfamiliar, a standard ML/DL course or text (e.g. Goodfellow et al. *Deep Learning*, Sutton & Barto *Reinforcement Learning*) covers the background this path builds on.
 
 ## Session Log
 

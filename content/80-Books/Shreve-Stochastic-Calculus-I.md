@@ -14,15 +14,15 @@ Shreve Vol I builds the entire theoretical machinery of quantitative finance —
 
 ## Role in quant-atlas
 - **Path-01 (Foundations):** The primary mathematical text for Weeks 3–6. Read after Hull Ch.13–15 gives intuitive context for the binomial tree. Prepares the reader for Shreve Vol II by introducing martingales, conditional expectation, and risk-neutral pricing in a tractable setting.
-- Concept notes in [[Risk-Neutral-Pricing]], [[Martingales]], [[No-Arbitrage]], [[State-Prices]], [[American-Options]] draw directly from this book.
+- Concept notes in [[Risk-Neutral-Pricing]], [[Martingales]], [[No-Arbitrage]], [[State-Prices]], [[American Options]] draw directly from this book.
 
 ## Chapter Map
 | Chapter | Topic | Concept Notes Fed | Difficulty |
 |---------|-------|-------------------|------------|
 | 1 | No-arbitrage in the one-period binomial model; replicating portfolios; risk-neutral probabilities | [[No-Arbitrage]], [[Risk-Neutral-Pricing]], [[Binomial-Trees]] | Intermediate |
 | 2 | Probability theory on finite sample spaces — sigma-algebras, filtrations, conditional expectation, martingales | [[Filtrations]], [[Conditional-Expectation]], [[Martingales]] | Intermediate |
-| 3 | State prices and the first/second fundamental theorems of asset pricing | [[State-Prices]], [[FTAP]], [[Risk-Neutral-Measure]] | Intermediate |
-| 4 | American derivative securities — optimal stopping, Snell envelope, early exercise premium | [[American-Options]], [[Optimal-Stopping]], [[Early-Exercise]] | Intermediate |
+| 3 | State prices and the first/second fundamental theorems of asset pricing | [[State-Prices]], [[FTAP]], [[Risk-Neutral Measure]] | Intermediate |
+| 4 | American derivative securities — optimal stopping, Snell envelope, early exercise premium | [[American Options]], [[Optimal-Stopping]], [[Early-Exercise]] | Intermediate |
 | 5 | Random walk — reflection principle, passage times, connection to Brownian motion | [[Random-Walk]], [[Brownian-Motion-Intro]], [[Reflection-Principle]] | Intermediate |
 
 ## Reading Strategy

@@ -14,17 +14,17 @@ Gatheral's book occupies a unique position: it is rigorous enough to satisfy a m
 
 ## Role in quant-atlas
 - **Path-02 (Volatility):** The primary text, used across all weeks. Ch.1 motivates the entire path. Ch.2–3 are the core pricing framework. Ch.4 (variance swaps) feeds the volatility trading strategy concepts. Ch.6–7 cover the advanced modeling content.
-- Concept notes in [[Vol-Surface]], [[Implied-Volatility]], [[Heston-Model]], [[Local-Vol]], [[Dupire-Formula]], [[Variance-Swaps]], [[SABR-Model]], [[Vol-Smile-Dynamics]] draw from this book.
+- Concept notes in [[Volatility Surface]], [[Implied Volatility]], [[Heston Model]], [[Local Volatility]], [[Dupire-Formula]], [[Variance Swap]], [[SABR Model]], [[Vol-Smile-Dynamics]] draw from this book.
 
 ## Chapter Map
 | Chapter | Topic | Concept Notes Fed | Difficulty |
 |---------|-------|-------------------|------------|
-| 1 | Stochastic volatility — why BSM fails, Heston model derivation and properties, characteristic function pricing | [[BSM-Failure]], [[Heston-Model]], [[Characteristic-Function-Pricing]] | Advanced |
-| 2 | Local volatility — Dupire's formula, local vol surface from market prices, relationship to stochastic vol | [[Local-Vol]], [[Dupire-Formula]], [[Local-Vol-vs-Stoch-Vol]] | Advanced |
-| 3 | The implied volatility surface — wings, skew, term structure, no-arbitrage conditions (calendar spread, butterfly) | [[Vol-Surface]], [[Vol-Skew]], [[No-Arbitrage-Vol-Surface]] | Advanced |
-| 4 | Variance swaps — replication via log contract, fair variance strike, convexity correction | [[Variance-Swaps]], [[Log-Contract]], [[Realized-Variance]] | Advanced |
-| 5 | Exotic options under stochastic vol — barrier and lookback sensitivities to vol of vol and correlation | [[Exotic-Options]], [[Barrier-Options-Stoch-Vol]], [[Vol-of-Vol-Impact]] | Advanced |
-| 6 | Vol of vol and SABR — SABR model derivation, Hagan approximation, calibration in rates markets | [[SABR-Model]], [[Hagan-Formula]], [[Vol-of-Vol]] | Advanced |
+| 1 | Stochastic volatility — why BSM fails, Heston model derivation and properties, characteristic function pricing | [[BSM-Failure]], [[Heston Model]], [[Characteristic-Function-Pricing]] | Advanced |
+| 2 | Local volatility — Dupire's formula, local vol surface from market prices, relationship to stochastic vol | [[Local Volatility]], [[Dupire-Formula]], [[Local-Vol-vs-Stoch-Vol]] | Advanced |
+| 3 | The implied volatility surface — wings, skew, term structure, no-arbitrage conditions (calendar spread, butterfly) | [[Volatility Surface]], [[Vol-Skew]], [[No-Arbitrage-Vol-Surface]] | Advanced |
+| 4 | Variance swaps — replication via log contract, fair variance strike, convexity correction | [[Variance Swap]], [[Log-Contract]], [[Realized-Variance]] | Advanced |
+| 5 | Exotic options under stochastic vol — barrier and lookback sensitivities to vol of vol and correlation | [[Exotic Options]], [[Barrier-Options-Stoch-Vol]], [[Vol-of-Vol-Impact]] | Advanced |
+| 6 | Vol of vol and SABR — SABR model derivation, Hagan approximation, calibration in rates markets | [[SABR Model]], [[Hagan-Formula]], [[Vol-of-Vol]] | Advanced |
 | 7 | Dynamics of the vol smile — forward skew, sticky strike vs sticky delta, what models imply about smile dynamics | [[Vol-Smile-Dynamics]], [[Forward-Skew]], [[Sticky-Strike]] | Advanced |
 
 ## Reading Strategy

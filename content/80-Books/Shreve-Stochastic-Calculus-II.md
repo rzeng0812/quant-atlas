@@ -15,22 +15,22 @@ Shreve Vol II is the most mathematically complete treatment of continuous-time f
 ## Role in quant-atlas
 - **Path-01 (Foundations):** Ch.3–5 are the capstone — Brownian motion, Ito calculus, and the full continuous-time pricing framework. Read after Shreve Vol I.
 - **Path-03 (Rates):** Ch.10 (HJM) is the theoretical underpinning for the interest rate derivatives introduced in Hull Ch.31.
-- Concept notes in [[Brownian-Motion]], [[Ito-Integral]], [[Ito-Lemma]], [[Martingale-Representation]], [[BSM-Derivation]], [[Change-of-Numeraire]], [[HJM-Framework]] draw from this book.
+- Concept notes in [[Brownian Motion]], [[Ito's Lemma]], [[Ito's Lemma]], [[Martingale-Representation]], [[BSM-Derivation]], [[Change-of-Numeraire]], [[HJM Framework]] draw from this book.
 
 ## Chapter Map
 | Chapter | Topic | Concept Notes Fed | Difficulty |
 |---------|-------|-------------------|------------|
 | 1 | General probability theory — measure spaces, Lebesgue integration, Radon-Nikodym theorem | [[Measure-Theory-Finance]], [[Radon-Nikodym]] | Advanced |
 | 2 | Information and conditioning — sigma-algebras, filtrations, conditional expectation in general spaces | [[Filtrations]], [[Conditional-Expectation]] | Advanced |
-| 3 | Brownian motion — construction, properties, quadratic variation | [[Brownian-Motion]], [[Quadratic-Variation]] | Advanced |
-| 4 | Stochastic calculus — Ito integral, Ito's formula, Ito processes, Girsanov's theorem | [[Ito-Integral]], [[Ito-Lemma]], [[Girsanov-Theorem]], [[SDEs]] | Advanced |
+| 3 | Brownian motion — construction, properties, quadratic variation | [[Brownian Motion]], [[Quadratic-Variation]] | Advanced |
+| 4 | Stochastic calculus — Ito integral, Ito's formula, Ito processes, Girsanov's theorem | [[Ito's Lemma]], [[Ito's Lemma]], [[Girsanov Theorem]], [[Stochastic Differential Equations]] | Advanced |
 | 5 | Risk-neutral pricing — equivalent martingale measures, self-financing portfolios, BSM derived rigorously | [[Risk-Neutral-Pricing]], [[BSM-Derivation]], [[Martingale-Representation]] | Advanced |
 | 6 | Connections to PDEs — Feynman-Kac formula, BSM PDE, Kolmogorov equations | [[Feynman-Kac]], [[BSM-PDE]], [[PDEs-in-Finance]] | Advanced |
-| 7 | Exotic options in continuous time — barriers, lookbacks, Asians | [[Exotic-Options]], [[Barrier-Options]] | Advanced |
-| 8 | American derivative securities in continuous time — free boundary problems, optimal stopping | [[American-Options]], [[Free-Boundary-Problems]] | Advanced |
+| 7 | Exotic options in continuous time — barriers, lookbacks, Asians | [[Exotic Options]], [[Barrier-Options]] | Advanced |
+| 8 | American derivative securities in continuous time — free boundary problems, optimal stopping | [[American Options]], [[Free-Boundary-Problems]] | Advanced |
 | 9 | Change of numeraire — forward measure, annuity measure, applications to pricing | [[Change-of-Numeraire]], [[Forward-Measure]], [[T-Forward-Measure]] | Advanced |
-| 10 | Term structure models — HJM framework, forward rate dynamics, Heath-Jarrow-Morton conditions | [[HJM-Framework]], [[Forward-Rates]], [[No-Arbitrage-Rates]] | Advanced |
-| 11 | Introduction to jump processes — Poisson processes, jump-diffusion models | [[Jump-Diffusion]], [[Poisson-Process]], [[Merton-Jump-Model]] | Advanced |
+| 10 | Term structure models — HJM framework, forward rate dynamics, Heath-Jarrow-Morton conditions | [[HJM Framework]], [[Forward-Rates]], [[No-Arbitrage-Rates]] | Advanced |
+| 11 | Introduction to jump processes — Poisson processes, jump-diffusion models | [[Jump-Diffusion]], [[Poisson-Process]], [[Merton Jump-Diffusion]] | Advanced |
 
 ## Reading Strategy
 Read Ch.3–5 after completing Shreve Vol I and Path-01's foundational sequence — these three chapters are the core of the book and the most important for a quant practitioner. Ch.1–2 are dense measure theory; if this is your first exposure, allow significant time and work every exercise. Ch.6 (Feynman-Kac / PDEs) is essential for understanding finite difference methods and connects to numerical pricing. Ch.10 (HJM) belongs in Path-03 after Hull Ch.31 — read it when you're specifically studying rates. Ch.11 (jump processes) and Ch.7–8 (exotics, American) can be read selectively based on need. This book rewards slow, active reading — do not skim proofs.
