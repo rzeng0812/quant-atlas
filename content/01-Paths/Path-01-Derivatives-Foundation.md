@@ -52,3 +52,5 @@ Price a vanilla European option from first principles, understand where the BSM 
 ## What's Next
 - [[01-Paths/Path-02-Stochastic-Volatility]] — Heston, SABR (unlocked after this)
 - [[01-Paths/Path-03-Interest-Rate-Models]] — Vasicek, HJM
+- [[Merton Jump-Diffusion]], [[Exotic Options]] — extending BSM beyond vanilla European payoffs
+- [[Credit Default Swap]] — the same no-arbitrage replication logic as Put-Call Parity, applied to credit risk instead of equity risk

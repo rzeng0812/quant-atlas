@@ -24,16 +24,18 @@ Learn the core toolkit for measuring what can go wrong in a portfolio and decidi
 | 1 | [[Markowitz Mean-Variance Optimization]] | any quant text | math | Foundation of portfolio theory; efficient allocation |
 | 2 | [[Efficient Frontier]] | any quant text | math | Visual/geometric output of MVO |
 | 3 | [[CAPM]] | Sharpe (1964) | math | Equilibrium extension of Markowitz; beta and market risk premium |
-| 4 | [[Sharpe Ratio]] | any quant finance text | math | Baseline risk-adjusted performance metric |
-| 5 | [[Maximum Drawdown]] | any quant finance text | math | Tail risk intuition; path-dependent loss measure |
-| 6 | [[Value at Risk]] | Hull ch.22 | math | Regulatory standard; percentile loss over a horizon |
-| 7 | [[Expected Shortfall]] | Hull ch.22 | math | Coherent replacement for VaR; average loss beyond threshold |
-| 8 | [[Factor Models]] | Fama & French (1993) | math | Decompose portfolio return and risk into systematic factors |
-| 9 | [[Kelly Criterion]] | Kelly (1956) | math | Optimal position sizing; maximize long-run growth rate |
-| 10 | [[Risk Parity]] | Bridgewater / Qian (2005) | math | Risk-based allocation; alternative to MVO |
-| 11 | [[Stress Testing]] | Hull ch.22 | math | Scenario analysis beyond VaR |
-| 12 | [[Correlation and Covariance Estimation]] | Lopez de Prado ch.2 | math | Input reliability for MVO and risk models |
-| 13 | [[Monte Carlo Methods]] | Glasserman ch.1 | math | Simulation for VaR/ES when closed form unavailable |
+| 4 | [[Black-Litterman]] | Black & Litterman (1990) | math | Fixes MVO's extreme-weight instability by blending equilibrium returns with investor views |
+| 5 | [[Sharpe Ratio]] | any quant finance text | math | Baseline risk-adjusted performance metric |
+| 6 | [[Maximum Drawdown]] | any quant finance text | math | Tail risk intuition; path-dependent loss measure |
+| 7 | [[Value at Risk]] | Hull ch.22 | math | Regulatory standard; percentile loss over a horizon |
+| 8 | [[Expected Shortfall]] | Hull ch.22 | math | Coherent replacement for VaR; average loss beyond threshold |
+| 9 | [[Factor Models]] | Fama & French (1993) | math | Decompose portfolio return and risk into systematic factors |
+| 10 | [[Kelly Criterion]] | Kelly (1956) | math | Optimal position sizing; maximize long-run growth rate |
+| 11 | [[Risk Parity]] | Bridgewater / Qian (2005) | math | Risk-based allocation; alternative to MVO |
+| 12 | [[Hierarchical Risk Parity]] | Lopez de Prado (2016) | math | Clustering-based allocation; avoids inverting an ill-conditioned covariance matrix |
+| 13 | [[Stress Testing]] | Hull ch.22 | math | Scenario analysis beyond VaR |
+| 14 | [[Correlation and Covariance Estimation]] | Lopez de Prado ch.2 | math | Input reliability for MVO and risk models |
+| 15 | [[Monte Carlo Methods]] | Glasserman ch.1 | math | Simulation for VaR/ES when closed form unavailable |
 
 ## Source Stack
 1. **Hull — Options, Futures & Other Derivatives** — ch.22
@@ -52,3 +54,6 @@ Learn the core toolkit for measuring what can go wrong in a portfolio and decidi
 
 ## What's Next
 - [[01-Paths/Path-05-Trading-Strategies]] — apply the risk measurement tools built here to real strategy construction and backtesting
+- Credit and counterparty risk beyond market risk: [[Credit Default Swap]], [[Structured Credit (CDOs and CLOs)]], [[XVA]]
+- [[Basel Capital Requirements]] — the regulatory framework that mandates the VaR/ES/stress-testing machinery built in this path actually be computed, validated, and defended
+- [[Climate Risk]] — an emerging risk source requiring the same correlation/dependence-modeling toolkit ([[Correlation and Covariance Estimation]]) extended with climate-specific structure

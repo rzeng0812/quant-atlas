@@ -27,6 +27,7 @@ Build on BSM to understand why a single constant volatility cannot explain obser
 | 6 | [[Local Volatility]] | Gatheral ch.1 / Dupire (1994) | math | Exact surface fit via Dupire's equation |
 | 7 | [[Variance Swap]] | Gatheral ch.4 | math | Model-free vol product; realized vs implied |
 | 8 | [[Gamma Scalping]] | Hull ch.19 | math | Vol trading in practice; P&L from delta hedging |
+| 9 | [[VIX]] | Hull ch.26 | math | The market's own model-free vol-surface summary statistic |
 
 ## Source Stack
 1. **Gatheral — The Volatility Surface** — ch.1-2, 4
@@ -46,3 +47,4 @@ Build on BSM to understand why a single constant volatility cannot explain obser
 ## What's Next
 - [[01-Paths/Path-03-Interest-Rate-Models]] — apply vol modeling ideas to the rates world (SABR for swaptions)
 - Exotic pricing deep-dive — barrier options, cliquet structures, forward vol agreements
+- [[Deep Hedging]] — ML-trained hedging policies that use Heston (or any of these vol models) as a training simulator, extending BSM/Heston delta hedging to realistic frictions ([[01-Paths/Path-07-ML-Finance]])

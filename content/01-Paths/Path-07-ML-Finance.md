@@ -28,6 +28,9 @@ Bridge general ML knowledge into quantitative finance applications. Learn how to
 | 5 | [[Regime Detection]] | Lopez de Prado ch.14 | math | Market state classification; HMM and unsupervised approaches |
 | 6 | [[Reinforcement Learning Trading]] | Cartea et al. ch.10 | math | RL for execution optimization and portfolio allocation |
 | 7 | [[Statistical Arbitrage]] | Lopez de Prado ch.5 | math | ML-powered stat arb; revisits Path-05 with ML lens |
+| 8 | [[Transformer Forecasting]] | He & Zhang (2026) | emerging | Attention-based return forecasting; why the output head matters more than the backbone |
+| 9 | [[Deep Hedging]] | Buehler et al. (2019) | emerging | RL/backprop-through-simulation applied to hedging under realistic frictions |
+| 10 | [[LLM Alpha Extraction]] | multiple, see note | emerging | Text-derived alpha factors; the most hype-prone, least settled topic in this path — read the Analysis section closely |
 
 ## Source Stack
 1. **Lopez de Prado — Advances in Financial Machine Learning** — ch.3, 4, 5, 14

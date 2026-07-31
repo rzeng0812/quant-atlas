@@ -26,9 +26,11 @@ Move from equity derivatives into the rates world. Understand the yield curve as
 | 3 | [[Interest Rate Swaps]] | Hull ch.7 | math | Most liquid rates derivative; swap curve |
 | 4 | [[Duration]] | Hull ch.4 | math | First-order rate sensitivity; DV01 |
 | 5 | [[Convexity]] | Hull ch.4 | math | Second-order sensitivity; why duration alone misprices |
-| 6 | [[Vasicek Model]] | Hull ch.31 | math | Simplest mean-reverting short-rate model |
-| 7 | [[HJM Framework]] | Hull ch.31 / Shreve II ch.10 | math | Model the entire forward curve; arbitrage-free by construction |
-| 8 | [[SABR Model]] | Hagan et al. (2002) | math | Rates options standard; swaptions, caps, floors |
+| 6 | [[Ornstein-Uhlenbeck Process]] | Hull ch.14 / Shreve II ch.4 | math | The mean-reverting SDE Vasicek is built on; read this first |
+| 7 | [[Vasicek Model]] | Hull ch.31 | math | Simplest mean-reverting short-rate model |
+| 8 | [[Hull-White Model]] | Hull & White (1990) | math | Time-dependent-drift Vasicek; fits the initial term structure exactly |
+| 9 | [[HJM Framework]] | Hull ch.31 / Shreve II ch.10 | math | Model the entire forward curve; arbitrage-free by construction |
+| 10 | [[SABR Model]] | Hagan et al. (2002) | math | Rates options standard; swaptions, caps, floors |
 
 ## Source Stack
 1. **Hull — Options, Futures & Other Derivatives** — ch.4, 31
@@ -47,3 +49,5 @@ Move from equity derivatives into the rates world. Understand the yield curve as
 - Interest rate derivatives desk roles — the models in this path are live market practice
 - Fixed income portfolio management — duration/convexity hedging at the portfolio level
 - [[01-Paths/Path-04-Risk-and-Portfolio]] — apply rate sensitivity tools within a broader risk framework
+- [[FX Spot and Forwards]] — the same no-arbitrage replication logic (borrow/lend in two curves) applied to currency instead of a single yield curve
+- [[XVA]] — funding and counterparty-risk adjustments for exactly the uncollateralized swaps priced in this path

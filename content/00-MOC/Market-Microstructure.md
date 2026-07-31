@@ -19,4 +19,5 @@ Order books, market impact, adverse selection
 - [[Market Making]]
 - [[Order Book]]
 - [[Price Impact]]
+- [[Smart Order Routing]]
 - [[Transaction Cost Analysis]]

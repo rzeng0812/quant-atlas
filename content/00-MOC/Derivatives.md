@@ -30,5 +30,7 @@ Pricing models, Greeks, volatility
 - [[Local Volatility]]
 - [[Merton Jump-Diffusion]]
 - [[SABR Model]]
+- [[Structured Credit (CDOs and CLOs)]]
 - [[Vasicek Model]]
 - [[Volatility Surface]]
+- [[XVA]]

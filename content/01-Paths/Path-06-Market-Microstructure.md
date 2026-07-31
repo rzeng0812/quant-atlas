@@ -27,6 +27,7 @@ Understand the mechanics of price formation — why spreads exist, who sets them
 | 4 | [[TWAP-VWAP]] | Industry standard | math | Benchmark execution strategies every practitioner uses |
 | 5 | [[Almgren-Chriss]] | Almgren & Chriss (2000) | math | Optimal execution theory; risk-adjusted liquidation |
 | 6 | [[Avellaneda-Stoikov]] | Avellaneda & Stoikov (2008) | math | Optimal market making with inventory risk |
+| 7 | [[Smart Order Routing]] | Ratliff-Crain et al. (2026) / Wah & Wellman (2016) | math | Where (not when) to trade, once a market fragments across venues |
 
 ## Source Stack
 1. **Cartea, Jaimungal & Penalva — Algorithmic and High-Frequency Trading** — ch.1, 4
@@ -46,6 +47,7 @@ Understand the mechanics of price formation — why spreads exist, who sets them
 - Path created.
 
 ## What's Next
-- HFT research — latency arbitrage, co-location, and queue position modeling
+- HFT research — latency arbitrage, co-location, and queue position modeling: [[MEV]] documents the identical latency-arbitrage mechanism in an on-chain, mempool-based setting
+- [[AMM Mechanics]] — market structure with no order book at all; a useful contrast case for what this path's "why spreads exist" machinery assumes
 - Execution algorithm development — applying Almgren-Chriss variants in live systems
 - Market impact modeling — estimating and hedging your own price impact

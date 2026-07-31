@@ -18,8 +18,10 @@ VaR, factor models, portfolio risk
 
 
 ## All Notes
+- [[Basel Capital Requirements]]
 - [[Black-Litterman]]
 - [[CAPM]]
+- [[Climate Risk]]
 - [[Correlation and Covariance Estimation]]
 - [[Efficient Frontier]]
 - [[Expected Shortfall]]
