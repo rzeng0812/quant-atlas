@@ -9,6 +9,10 @@ updates:
         applies-to: "version-updates"
         patterns:
           - "*"
+    ignore:
+      # js-yaml v5 breaks the Quartz build (see commit 55fe206) -- only allow minor/patch bumps.
+      - dependency-name: "js-yaml"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
